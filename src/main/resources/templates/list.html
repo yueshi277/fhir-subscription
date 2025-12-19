@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'list')}">
+<body>
+<!--<script type="text/javascript" th:src="@{/js/actions.js}"></script>-->
+<!--<script src="/public/js/actions.js"></script>-->
+<script>
+    function show(inp) {
+        alert(inp);
+    }
+</script>
+<div class="container">
+    <div style="margin-bottom:20px;">
+        <span style="font-size:2.5em;">Subscriptions</span>
+        <span style="margin-left: 30px"> Total: </span>
+        <span th:text="${total}"/>
+        <a style="float: right;margin:20px 50px 0 0;" th:href="@{/delete}">
+            <i class="glyphicon glyphicon-trash"></i>
+        </a>
+    </div>
+
+    <ul th:each="record : ${records}">
+        <li >
+            <pre th:text="${record}">
+            </pre>
+
+        </li>
+    </ul>
+</div>
+
+</body>
+</html>

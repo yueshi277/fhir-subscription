@@ -1,0 +1,1 @@
+web: java -jar target/fhir-subscription-1.0-SNAPSHOT.jar
